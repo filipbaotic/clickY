@@ -47,23 +47,27 @@ a:hover {
     left: 40px;
     width: 130px;
     z-index: 500;
-}
-
-.links {
-    -webkit-backdrop-filter: blur(15px) saturate(200%);
-    backdrop-filter: blur(15px) saturate(200%);
-    background: rgba(255, 255, 255, .6);
     overflow: hidden;
     border-radius: 7.5px;
     -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
     box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
 }
 
+.links {
+    -webkit-backdrop-filter: blur(15px) saturate(200%);
+            backdrop-filter: blur(15px) saturate(200%);
+    background: rgba(255, 255, 255, .6);
+    overflow: hidden;
+    border-radius: 7.5px;
+    margin-top: -1px;
+}
+
 .links a {
     display: block;
     position: relative;
     padding: 12px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    height: 16px!important;
+    border-top: 1px solid rgba(0, 0, 0, .2);
     -webkit-transition-duration: .2s;
     -o-transition-duration: .2s;
     transition-duration: .2s;
@@ -98,10 +102,6 @@ a:hover {
 .index {
     z-index: 999;
     background: rgba(255, 255, 255, 1)!important;
-}
-
-.links a:last-of-type {
-    border-bottom: 0;
 }
 
 .arrow {
@@ -144,7 +144,6 @@ a:hover {
 .links .sub a {
     display: block;
     padding: 12px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
     -webkit-transition-duration: .2s;
     -o-transition-duration: .2s;
     transition-duration: .2s;
@@ -159,11 +158,11 @@ a:hover {
 }
 
 .pre-hide.active {
-    margin-top: calc(2 * -40px);
+    margin-top: calc(2 * -41px);
 }
 
 .post-hide.active {
-    margin-bottom: -46px;
+    margin-bottom: -41px;
 }
 
 .body {
@@ -202,19 +201,6 @@ a:hover {
         left: calc(50% - 90px);
         width: 180px;
         margin: 60px 0;
-    }
-    .links a,
-    .sub a {
-        padding: 13px 15px;
-    }
-    .links .sub.active {
-        height: calc(6 * 40px);
-    }
-    .pre-hide.active {
-        margin-top: -84px;
-    }
-    .post-hide.active {
-        margin-bottom: -42px;
     }
     .body,
     .first_landscape {
@@ -264,7 +250,10 @@ a:hover {
         width: 180px;
         -webkit-backdrop-filter: blur(20px)!important;
         backdrop-filter: blur(20px);
-        border-radius: 7.5px;
+    overflow: hidden;
+    border-radius: 7.5px;
+    -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
     }
 
     .blur{
@@ -272,3 +261,11 @@ a:hover {
         backdrop-filter: blur(20px);
         }
 }
+
+@media not all and (min-resolution:.001dpcm) { @media {
+    
+    .safari {
+        background: #fff;
+    }
+
+}}
