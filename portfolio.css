@@ -264,6 +264,7 @@ a:hover {
         width: 180px;
         -webkit-backdrop-filter: blur(20px)!important;
         backdrop-filter: blur(20px);
+        border-radius: 7.5px;
     }
 
     .blur{
