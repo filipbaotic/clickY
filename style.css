@@ -1,0 +1,227 @@
+body,
+html {
+    background: #ffffff;
+    font-family: SF Pro Display;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: -0.3px;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: SF Pro Display;
+    font-weight: 400;
+    src: url(SF-Pro-Display-Light.otf);
+}
+
+a,
+a:hover {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+img {
+    max-width: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.8, 0.8);
+                transform: scale(0.8, 0.8);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.8, 0.8);
+                transform: scale(0.8, 0.8);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+    }
+}
+
+.content {
+    position: absolute;
+    width: 180px;
+    top: calc(50% - 209px);
+    left: calc(50% - 90px);
+    -webkit-animation: fadeIn .6s;
+            animation: fadeIn .6s;
+}
+
+.filipbaotic {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    background: #fff url(images/filip.jpg);
+    background-size: 130%;
+    background-position: -33px -50px;
+    overflow: hidden!important;
+    -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+    border-radius: 7.5px;
+    margin-bottom: 20px;
+}
+
+.filipb{
+    position: absolute;
+    top: 145px;
+    left: 0px;
+    height: 25px;
+    width: 180px;
+    background: url(images/white.png) no-repeat;
+    background-size: auto 25px;
+    background-position: center;
+}
+
+.social {
+    position: relative;
+    width: 180px;
+    margin-top: 180px;
+    height: 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: auto 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .6;
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+.icon:hover {
+    opacity: 1;
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+.fb {
+    background-image: url(images/facebook.png);
+}
+
+.ig {
+    background-image: url(images/instagram.png);
+}
+
+.tw {
+    background-image: url(images/twitter.png);
+}
+
+.px {
+    background-image: url(images/500px.png);
+}
+
+.un {
+    background-image: url(images/unsplash.png);
+}
+
+.sh {
+    background-image: url(images/shutterstock.png);
+}
+
+.fr {
+    background-image: url(images/freelancer.png);
+}
+
+.links {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+            box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+    border-radius: 7.5px;
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+.links a {
+    display: block;
+    padding: 13px 15px;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+.links a:hover {
+    background: rgba(0, 0, 0, .03);
+    -webkit-transition-duration: .2s;
+         -o-transition-duration: .2s;
+            transition-duration: .2s;
+}
+
+.links a:first-child {
+    border-top: 1px solid transparent;
+}
+
+/*  NOT IN USE */
+
+.handlogo {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 179px;
+    background: url(images/handwritten.png);
+    -webkit-clip-path: url(#anima);
+            clip-path: url(#anima);
+}
+
+.handwritten {
+    fill: none;
+    fill-opacity: 1;
+    fill-rule: nonzero;
+    stroke: red;
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray: 2700;
+    stroke-dashoffset: 0;
+    -webkit-animation: signature 3s linear forwards;
+            animation: signature 3s linear forwards;
+}
+
+@-webkit-keyframes signature {
+    from {
+        stroke-dashoffset: 2700;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes signature {
+    from {
+        stroke-dashoffset: 2700;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
