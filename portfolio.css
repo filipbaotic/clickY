@@ -211,7 +211,7 @@ a:hover {
         height: calc(6 * 40px);
     }
     .pre-hide.active {
-        margin-top: calc(2 * -42px);
+        margin-top: -84px;
     }
     .post-hide.active {
         margin-bottom: -42px;
@@ -239,16 +239,17 @@ a:hover {
     .body .pic:last-child img {
         padding-bottom: 162px;
     }
-    .scroll{display: block;}
+    .scroll{display: block;
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, .7);}
     .to_top {
         position: fixed;
         bottom: 60px;
         left: calc(50vw - 21px);
         width: 42px;
         height: 42px;
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-        background: rgba(255, 255, 255, .7);
+        -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
         overflow: hidden;
         border-radius: 42px;
         -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
