@@ -8,6 +8,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -23,6 +24,15 @@ html {
 }
 
 @-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -55,11 +65,12 @@ a:hover {
 
 .links {
     -webkit-backdrop-filter: blur(15px) saturate(200%);
-            backdrop-filter: blur(15px) saturate(200%);
+    backdrop-filter: blur(15px) saturate(200%);
     background: rgba(255, 255, 255, .6);
     overflow: hidden;
     border-radius: 7.5px;
     margin-top: -1px;
+    font-size: 13px;
 }
 
 .links a {
@@ -167,34 +178,34 @@ a:hover {
 
 .body {
     position: absolute;
-    top: 40px;
+    top: 80px;
     left: 210px;
-    display: -webkit-box;
-    width: calc(100% - 250px);
-    height: calc(100% - 80px);
+    width: 500px;
     -webkit-animation: fadeIn .4s;
     animation: fadeIn .4s;
+    display: block;
 }
 
-.body .pic {
-    height: 100%;
-}
-
-.body .pic img {
-    height: 100%;
-    width: auto;
-    padding-right: 40px;
-}
-
-.first_landscape {
-    left: 0px;
-}
-
-.to_top, .scroll {
+.to_top,
+.scroll {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+#instafeed {
+    margin: 10px 0 10px -10px;
+    width: calc(100% + 20px);
+    position: relative;
+    display: grid;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
+}
+
+a.ig_image{
+    margin: 10px;
+    padding-top: calc(100% - 20px);
+    background: rgba(207, 205, 200, 1);
+}
+
+@media only screen and (max-width: 750px) {
     .left {
         position: relative;
         top: 0px;
@@ -202,30 +213,24 @@ a:hover {
         width: 180px;
         margin: 60px 0;
     }
-    .body,
-    .first_landscape {
+    .body{
         position: relative;
         top: 20px;
         left: 20px;
         display: block;
         width: calc(100vw - 40px);
         height: auto;
-    }
-    .body .pic {
-        width: 100%;
-        display: -webkit-box;
-        height: auto;
-    }
-    .body .pic img {
-        height: auto;
-        width: 100%;
-        padding-right: 0px;
-        padding-bottom: 20px;
-    }
-    .body {
         padding-bottom: 162px;
     }
-    .scroll{display: block;}
+    
+    .body img{
+        max-width: 100%;
+    }
+
+    .scroll {
+        display: block;
+    }
+
     .to_top {
         position: fixed;
         bottom: 60px;
@@ -250,22 +255,19 @@ a:hover {
         width: 180px;
         -webkit-backdrop-filter: blur(20px)!important;
         backdrop-filter: blur(20px);
-    overflow: hidden;
-    border-radius: 7.5px;
-    -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
-    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+        overflow: hidden;
+        border-radius: 7.5px;
+        -webkit-box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
+        box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, .1);
     }
-
-    .blur{
+    .blur {
         -webkit-backdrop-filter: blur(20px)!important;
         backdrop-filter: blur(20px);
-        }
+    }
 }
 
-@media not all and (min-resolution:.001dpcm) { @media {
-    
-    .safari {
-        background: #fff;
+@media not all and (min-resolution:.001dpcm) {
+        .safari {
+            background: #fff;
     }
-
-}}
+}
